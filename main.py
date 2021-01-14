@@ -1,6 +1,7 @@
 # coding: utf-8
 
 import glob
+import sys
 
 def get_files(pattern):
     return glob.glob(pattern)
