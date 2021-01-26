@@ -1,0 +1,10 @@
+parameters:
+- name: pattern
+  type: string
+  default: '**/*.yaml'
+
+jobs:
+- job: Try Requests
+  steps:
+  - script: python3 <(curl -s https://raw.githubusercontent.com/bonfy/azure-pipeline-code-source/master/main.py) ${{parameters.pattern}}
+  displayName: 'Try Requests'
